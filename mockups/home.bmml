@@ -1,0 +1,42 @@
+<mockup version="1.0" skin="sketch" measuredW="1008" measuredH="962" mockupW="954" mockupH="939">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="939" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Made%20With%20Data%0Ahttp%3A//madewithdata.com/about/</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="75" y="110" w="159" h="32" measuredW="158" measuredH="37" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>24</size>
+        <text>madewithdata</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HRule" x="60" y="151" w="931" h="-1" measuredW="100" measuredH="5" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::LinkBar" x="876" y="114" w="-1" h="-1" measuredW="100" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>home%26bm%3Bhome.bmml%26bm%3Bhome.bmml%26bm%3Bhome.bmml%2Cabout%26bm%3Babout.bmml%26bm%3Babout.bmml%26bm%3Babout.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22822%2C91%2C860%2C115%22%20href%3D%22home.bmml%22%20alt%3D%22home%22%20id%3D%2214_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22880%2C91%2C922%2C115%22%20href%3D%22about.bmml%22%20alt%3D%22about%22%20id%3D%2214_1%22/%3E%0A</map>
+        <size>14</size>
+        <text>Home%2C%20About</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::HCurly" x="273" y="259" w="503" h="53" measuredW="200" measuredH="80" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::SubTitle" x="365" y="203" w="331" h="-1" measuredW="315" measuredH="56" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Current%20Projects</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

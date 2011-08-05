@@ -1,0 +1,38 @@
+ul{ list-style: none; }
+
+header{
+    display:block;
+    ul{
+        border-bottom:1px solid #eee;
+        margin:0 auto;
+        padding:10px 0;
+        width:90%;
+    }
+    li.float_left{
+        float:left;
+        a{
+          background: url('/static/img/madewithdata_logo.png') no-repeat center center;
+          height: 33px;
+          width: 257px;
+        }
+    }
+    a {
+        color:#444;
+        display:block;
+        font-size:16px;
+        padding:10px 12px;
+        width:75px;
+        text-align:center;
+        text-decoration:none;
+    }
+    a:hover{
+        color:red;
+    }
+}
+
+
+/* Custom highlight */
+@lighter_color: rgba(180, 0, 182, .7);
+::-moz-selection{ background:@lighter_color; color:#fff; text-shadow: none; }
+::selection { background:@lighter_color; color:#fff; text-shadow: none; }
+

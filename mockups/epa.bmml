@@ -1,0 +1,72 @@
+<mockup version="1.0" skin="sketch" measuredW="1008" measuredH="658" mockupW="954" mockupH="635">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="54" y="23" w="954" h="635" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Made%20With%20Data%0Ahttp%3A//madewithdata.com/epa/</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::ComboBox" x="568" y="275" w="401" h="-1" measuredW="316" measuredH="26" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>16</size>
+        <state>closed</state>
+        <text>Where%27s%20the%20closest%20radiation%20facility%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="75" y="109" w="159" h="32" measuredW="153" measuredH="36" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>24</size>
+        <text>madewithdata</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::LinkBar" x="876" y="114" w="-1" h="-1" measuredW="104" measuredH="24" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>home%26bm%3Bhome.bmml%26bm%3Bhome.bmml%26bm%3Bhome.bmml%2Cabout%26bm%3Babout.bmml%26bm%3Babout.bmml%26bm%3Babout.bmml</hrefs>
+        <size>14</size>
+        <text>Home%2C%20About</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::TextInput" x="596" y="341" w="346" h="-1" measuredW="109" measuredH="30" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <backgroundAlpha>1</backgroundAlpha>
+        <size>16</size>
+        <text>Your%20Zipcode</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::HRule" x="60" y="151" w="931" h="-1" measuredW="100" measuredH="5" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.25</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::VCurly" x="463" y="213" w="28" h="275" measuredW="180" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>right</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Tooltip" x="779" y="379" w="163" h="40" measuredW="143" measuredH="33.1" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Enter%20Your%20Zipcode</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="148" y="193" w="264" h="279" measuredW="264" measuredH="279" zOrder="7" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::SubTitle" x="70" y="0" w="112" h="-1" measuredW="111" measuredH="80" zOrder="0" locked="false" isInGroup="19">
+          <controlProperties>
+            <size>60</size>
+            <text>EPA</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Paragraph" x="0" y="97" w="264" h="182" measuredW="200" measuredH="140" zOrder="1" locked="false" isInGroup="19">
+          <controlProperties>
+            <size>20</size>
+            <text>For%20the%20first%20time%20ever%2C%20easily%20search%20the%20EPA%27s%20database%20for%20information%20relevant%20to%20you%20and%20your%20location.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

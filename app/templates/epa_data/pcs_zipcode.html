@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/epa.css">
+{% endblock %}
+
+
+{% block js %}
+<script type="text/javascript" src="/static/js/epa_pcs.js"></script>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="pcs">
+    <h2>{{ count }}</h2>
+    <p class="top">Facilities in your zipcode either currently have or previously
+    had permits to pollute public water sources.
+    </p>
+</div>
+<hr />
+<div class="pcs clearfix">
+    <div class="float_left company_img"></div>
+    <div class="float_right">
+        <ul>
+        {% for name in names %}
+            {%- if name is sameas "" %}
+            {% set empty = "empty" %}
+            {% else %}
+            {% set empty = "" %}
+            {% endif %}
+            <li class="{{ loop.cycle('odd', 'even') }} {{ empty }}">
+                <a href="#" class="building">{{ name }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+<hr />
+<div class="pcs clearfix">
+    <div class="float_left">
+        <ul>
+        {% for water in waters %}
+            {%- if water is sameas "" %}
+            {% set empty = "empty" %}
+            {% else %}
+            {% set empty = "" %}
+            {% endif %}
+            <li class="{{ loop.cycle('odd', 'even') }} {{ empty }}">{{ water }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="float_right arrow_img">
+        {% if empty_waters %}
+        <p>Unfortunately, none of the receiving water sources were stored in
+        the EPA's database &mdash; else they'd be listed here.</p>
+        {% else %}
+        <p>Some of the receiving water sources listed in the EPA's database.</p>
+        {% endif %}
+    </div>
+</div>
+<hr />
+<div class="pcs clearfix">
+    <div class="float_left">
+        <p>Out of the top 25 most populated cities in the United States, the
+        average zipcode contained <strong>#</strong> facilities with permits to polluted
+        public water sources.</p>
+    </div>
+    <div class="float_right"></div>
+</div>
+<hr />
+<div class="pcs clearfix">
+    <div class="float_left">
+        <p>Want to play around with the data and API wrapper
+        used here?</p>
+        <a href="https://github.com/codeforamerica/epa_python" class="github ir">Github</a>
+    </div>
+    <div class="float_right">
+        <p>Or download the JSON data used to make this page?</p>
+        <a href="{{ url_for('epa_pcs') }}?zipcode={{ zipcode }}&format=json" class="json_data">{ }</a>
+    </div>
+</div>
+{% endblock %}
