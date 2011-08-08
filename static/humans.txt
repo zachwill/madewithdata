@@ -3,19 +3,18 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  Developer: Zach Williams
+  Site: zachwill.com
+  Twitter: zachwill
+  Location: San Francisco, CA
 
 /* THANKS */
-  Names (& URL): 
+  Names (& URL): EPA (for their API)
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
-  
+  Components: Modernizr, jQuery, Python (Flask framework)
+  Software: Vim
 
                                     
                                -o/-                       
