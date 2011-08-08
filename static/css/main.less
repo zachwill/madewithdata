@@ -1,5 +1,10 @@
 ul{ list-style: none; }
 
+body:after{
+    content: url('/static/img/cfa_dark.png') url('/static/img/cfa_color.png');
+    display: none;
+}
+
 header{
     display:block;
     ul{
@@ -27,6 +32,20 @@ header{
     }
     a:hover{
         color:red;
+    }
+}
+
+footer{
+    display: block;
+    margin: 100px 0 25px;
+    a.ir{
+        background: url('/static/img/cfa_dark.png') no-repeat center center;
+        height: 45px;
+        margin: 0 auto;
+        width: 100px;
+    }
+    a.ir:hover{
+        background-image: url('/static/img/cfa_color.png')
     }
 }
 

@@ -13,19 +13,21 @@
 
 
 {% block main %}
-<div class="left">
-  <h2>EPA</h2>
-  <p>For the first time ever, easily search the EPA's database for information
-  relevant to you and your location.</p>
-</div>
+<div class="clearfix">
+  <div class="left">
+    <h2>EPA</h2>
+    <p>For the first time ever, easily search the EPA's database for information
+    relevant to you and your location.</p>
+  </div>
 
-<div class="right">
+  <div class="right">
 
-{% from "_form_helpers.html" import render_field %}
-<form action="{{ url_for('epa_data') }}" method="GET">
-    {{ form.q }}
-    {{ render_field(form.location, placeholder="Your Location") }}
-    {{ form.submit }}
-</form>
+  {% from "_form_helpers.html" import render_field %}
+  <form action="{{ url_for('epa_data') }}" method="GET">
+      {{ form.q }}
+      {{ render_field(form.location, placeholder="Your Location") }}
+      {{ form.submit }}
+  </form>
+  </div>
 </div>
 {% endblock %}

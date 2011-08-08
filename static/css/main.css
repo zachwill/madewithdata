@@ -1,7 +1,10 @@
 ul{list-style:none;}
+body:after{content:url('/static/img/cfa_dark.png') url('/static/img/cfa_color.png');display:none;}
 header{display:block;}header ul{border-bottom:1px solid #eee;margin:0 auto;padding:10px 0;width:90%;}
 header li.float_left{float:left;}header li.float_left a{background:url('/static/img/madewithdata_logo.png') no-repeat center center;height:33px;width:257px;}
 header a{color:#444;display:block;font-size:16px;padding:10px 12px;width:75px;text-align:center;text-decoration:none;}
 header a:hover{color:red;}
+footer{display:block;margin:100px 0 25px;}footer a.ir{background:url('/static/img/cfa_dark.png') no-repeat center center;height:45px;margin:0 auto;width:100px;}
+footer a.ir:hover{background-image:url('/static/img/cfa_color.png');}
 ::-moz-selection{background:rgba(180, 0, 182, 0.7);color:#fff;text-shadow:none;}
 ::selection{background:rgba(180, 0, 182, 0.7);color:#fff;text-shadow:none;}
