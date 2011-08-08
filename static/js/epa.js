@@ -11,8 +11,8 @@ ns.selectChange = function() {
       input = paragraph.children('input');
 
   if (value == 'pcs') {
-    label.text('Zipcode');
-    input.attr('placeholder', 'Your Zipcode')
+    label.text('ZIP Code');
+    input.attr('placeholder', 'Your ZIP Code')
          .css('width', '');
   } else if (value == 'radinfo') {
     label.text('Location');

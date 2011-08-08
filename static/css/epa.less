@@ -1,3 +1,5 @@
+@color: #b400b6;
+
 header{ margin-bottom: 100px; }
 .left h2, .right form{ margin-top: 20px; }
 .left{
@@ -91,7 +93,7 @@ hr{
       text-decoration:none;
   }
   .building:hover{
-      color:#b400b6;
+      color: @color;
   }
   li.empty{
     height: 19px;
@@ -99,6 +101,30 @@ hr{
   .arrow_img{
       background:url('/static/img/arrow.png') no-repeat center 60%;
       height: 250px;
+  }
+  strong{
+    a{
+      color: #444;
+      text-decoration: none;
+    }
+    a:hover{
+      color: @color;
+    }
+  }
+  .average {
+      color: #444;
+      display: block;
+      font-size: 92px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+  }
+  .average:hover{
+    color: @color;
+  }
+  em{
+    display: block;
+    text-align: center;
   }
   .github{
       background:url('/static/img/github.png') no-repeat center center;
@@ -122,7 +148,7 @@ hr{
       text-align: center;
       width: 100%;
   }
-  .json_data:hover { color: #b400b6; }
+  .json_data:hover { color: @color; }
 }
 
 /* iPad [portrait + landscape] */

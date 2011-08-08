@@ -20,6 +20,11 @@ hr{border-top:1px solid #DDD;margin:50px auto;width:60%;}
 .pcs .building:hover{color:#b400b6;}
 .pcs li.empty{height:19px;}
 .pcs .arrow_img{background:url('/static/img/arrow.png') no-repeat center 60%;height:250px;}
+.pcs strong a{color:#444;text-decoration:none;}
+.pcs strong a:hover{color:#b400b6;}
+.pcs .average{color:#444;display:block;font-size:92px;font-weight:bold;text-align:center;text-decoration:none;}
+.pcs .average:hover{color:#b400b6;}
+.pcs em{display:block;text-align:center;}
 .pcs .github{background:url('/static/img/github.png') no-repeat center center;height:128px;margin:60px 0;}
 .pcs .github:after{content:url('/static/img/github_hover.png');display:none;}
 .pcs .github:hover{background:url('/static/img/github_hover.png') no-repeat center center;}
