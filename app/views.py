@@ -58,8 +58,8 @@ def render_epa_pcs_data(data, zipcode):
     if 'Count' in data:
         count = int(data['Count'])
     else:
-        # TODO: Should point to 'epa_data/pcs_zero.html'
-        return "D'oh!"
+        # Yay! No polluters.
+        return render_template('epa_data/pcs_zero.html')
     pcs_data = data['PCS_PERMIT_FACILITY']
     names, waters = set(), set()
     if not count > 1:

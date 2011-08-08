@@ -16,6 +16,8 @@ hr{border-top:1px solid #DDD;margin:50px auto;width:60%;}
 .pcs ul{height:250px;margin:0 5%;overflow-y:scroll;}
 .pcs li{font-size:16px;margin:0 10px 0 0;padding:10px;}
 .pcs li.odd{background:#eee;}
+.pcs .happy_face{background:url('/static/img/happy_face.png') no-repeat center center;height:250px;}
+.pcs strong.yay{display:block;font-size:40px;margin-bottom:25px;text-align:center;}
 .pcs .building{color:#444;text-decoration:none;}
 .pcs .building:hover{color:#b400b6;}
 .pcs li.empty{height:19px;}

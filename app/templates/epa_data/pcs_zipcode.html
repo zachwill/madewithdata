@@ -59,29 +59,7 @@
     </div>
 </div>
 <hr />
-<div class="pcs clearfix">
-    <div class="float_left">
-        <p>Out of the top 25 most populated cities in the United States, the
-        average ZIP Code contained
-        <strong><a href="https://github.com/zachwill/epa_pcs_zip_codes">
-            a little more than 4</a></strong>
-        facilities with permits to polluted public water sources.</p>
-    </div>
-    <div class="float_right">
-      <a class="average"
-         href="https://github.com/zachwill/epa_pcs_zip_codes">4</a>
-    </div>
-</div>
-<hr />
-<div class="pcs clearfix">
-    <div class="float_left">
-        <p>Want to play around with the data and API wrapper
-        used here?</p>
-        <a href="https://github.com/codeforamerica/epa_python" class="github ir">Github</a>
-    </div>
-    <div class="float_right">
-        <p>Or download the JSON data used to make this page?</p>
-        <a href="{{ url_for('epa_pcs') }}?zipcode={{ zipcode }}&format=json" class="json_data">{ }</a>
-    </div>
-</div>
+
+{% include "epa_data/_info.html" %}
+
 {% endblock %}
