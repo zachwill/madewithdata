@@ -9,8 +9,10 @@ from flask import (Module, render_template, redirect, request,
                    url_for, jsonify)
 
 from epa.pcs import PCS
+from googlemaps import GoogleMaps
 
 from .forms import EpaForm
+from .epa_utils import pcs_set_to_list, haversine
 
 views = Module(__name__, 'views')
 
@@ -35,7 +37,43 @@ def epa_data():
     location = request.args['location']
     if q == 'pcs' and location:
         return redirect(url_for('epa_pcs', zipcode=location))
+    elif q == 'radinfo' and location:
+        return redirect(url_for('epa_radinfo', address=location))
     return redirect(url_for('epa'))
+
+
+@views.route('/epa/radinfo')
+def epa_radinfo():
+    """
+    Find facilities in a zipcode that have EPA permits to pollute public
+    water sources.
+    """
+    if 'address' not in request.args:
+        return redirect(url_for('epa'))
+    address = request.args['address']
+    try:
+        geo_data = GoogleMaps().geocode(address)
+    except:
+        return "Sorry, we had trouble finding that address."
+    else:
+        # Find the address state.
+        state, coords = address_details(geo_data)
+        # Search against the dict of radiation location states.
+        # Haversine formula against origin and destination.
+        # Return miles and address of nearest location.
+    return str(coords)
+
+
+def address_details(geo_data):
+    """
+    Based on geocoded data from Google's API, find both the coordinates and
+    state for an address.
+    """
+    place = geo_data['Placemark'][0]
+    coords = tuple(reversed(place['Point']['coordinates'][:-1]))
+    address_dict = place['AddressDetails']['Country']['AdministrativeArea']
+    state = address_dict['AdministrativeAreaName']
+    return state, coords
 
 
 @views.route('/epa/pcs')
@@ -77,33 +115,7 @@ def render_epa_pcs_data(data, zipcode):
                            empty_waters=empty_waters)
 
 
-def pcs_set_to_list(names, waters):
-    """
-    Turn sets to lists and make sure that they have a length of 5
-    elements.
-    """
-    names, waters = list(names), list(waters)
-    if not waters:
-        # It was an empty set.
-        empty_waters = True
-    else:
-        empty_waters = False
-    names = append_blank_elements(names, 5)
-    waters = append_blank_elements(waters, 5)
-    return names, waters, empty_waters
-
-
-def append_blank_elements(some_list, desired_length):
-    """
-    Append blank elements to a list if it's length is less than a
-    designated number.
-    """
-    if len(some_list) < desired_length:
-        number = desired_length - len(some_list)
-        blank = [''] * number
-        some_list.extend(blank)
-    return some_list
-
+# The following should be applicable to all web applications.
 
 @views.route('/qunit/')
 def qunit():

@@ -20,6 +20,8 @@ ns.selectChange = function() {
          .css('width', '100%');
   }
 
+  input.val('').focus();
+
 };
 
 ns.init = function() {

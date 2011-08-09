@@ -1,14 +1,32 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/epa.css">
+{% endblock %}
+
+
+
+{% block main %}
+
+<div class="epa">
+    <h2>{{ count }}</h2>
+    <p class="top">Facilities in your ZIP Code either currently have or previously
+    had permits to pollute public water sources.
+    </p>
+</div>
+<hr />
+<div class="epa clearfix">
+    <div class="float_left"></div>
+    <div class="float_right">
+      <h2>{{ miles }}</h2>
+      <em>Miles</em>
+    </div>
+</div>
+<hr />
 <div class="epa clearfix">
     <div class="float_left">
-        <p>Out of the top 25 most populated cities in the United States, the
-        average ZIP Code contained
-        <strong><a href="https://github.com/zachwill/epa_pcs_zip_codes">
-            a little more than 4</a></strong>
-        facilities with permits to polluted public water sources.</p>
     </div>
-    <div class="float_right">
-      <a class="average"
-         href="https://github.com/zachwill/epa_pcs_zip_codes">4</a>
+    <div class="float_right arrow_img">
     </div>
 </div>
 <hr />
@@ -23,3 +41,4 @@
         <a href="{{ url_for('epa_pcs') }}?zipcode={{ zipcode }}&format=json" class="json_data">{ }</a>
     </div>
 </div>
+{% endblock %}
