@@ -19,3 +19,4 @@ flask-sqlalchemy
 # Extra Libraries
 # ----------------------
 epa
+googlemaps
