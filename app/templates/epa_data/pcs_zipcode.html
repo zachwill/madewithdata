@@ -28,8 +28,8 @@
             {% else %}
             {% set empty = "" %}
             {% endif %}
-            <li class="{{ loop.cycle('odd', 'even') }} {{ empty }}">
-                <a href="#" class="building">{{ name }}</a>
+            <li class="{{ loop.cycle('odd', 'even') }} {{ empty }} building">
+                {{ name }}
             </li>
         {% endfor %}
         </ul>
