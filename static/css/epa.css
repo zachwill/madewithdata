@@ -32,5 +32,10 @@ hr{border-top:1px solid #DDD;margin:50px auto;width:60%;}
 .epa .github:hover{background:url('/static/img/github_hover.png') no-repeat center center;}
 .epa .json_data{font-size:128px;color:#333;display:block;margin:32px 0;text-decoration:none;text-align:center;width:100%;}
 .epa .json_data:hover{color:#b400b6;}
+.epa .radiation_img{background:url('/static/img/radiation.png') no-repeat center center;height:250px;}
+.epa .radiation_miles{margin-top:40px;}.epa .radiation_miles em{font-size:16px;text-align:center;text-transform:uppercase;}
+.epa .lat_lng{font-size:24px;margin:50px 0 0;text-align:center;width:100%;}
+.epa .marker_img{background:url('/static/img/marker.png') no-repeat center center;height:250px;}
+.epa .globe_img{background:url('/static/img/globe.png') no-repeat center center;height:250px;}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){body{zoom:75%;}}@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
 and (orientation: landscape){body{zoom:95%;}}@media only screen and (max-device-width: 480px){}

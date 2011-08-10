@@ -6,13 +6,13 @@ application.
 """
 
 from flask import (Module, render_template, redirect, request,
-                   url_for, jsonify)
+                   url_for, jsonify, flash)
 
 from epa.pcs import PCS
 from googlemaps import GoogleMaps
 
+from epa_utils import address_details, nearest_facility, pcs_set_to_list
 from .forms import EpaForm
-from .epa_utils import pcs_set_to_list, haversine
 
 views = Module(__name__, 'views')
 
@@ -48,32 +48,26 @@ def epa_radinfo():
     Find facilities in a zipcode that have EPA permits to pollute public
     water sources.
     """
-    if 'address' not in request.args:
+    if 'format' in request.args:
+        return views.send_static_file('js/all_facilities.json')
+    elif 'address' not in request.args:
         return redirect(url_for('epa'))
     address = request.args['address']
     try:
         geo_data = GoogleMaps().geocode(address)
     except:
-        return "Sorry, we had trouble finding that address."
+        return redirect(url_for('epa'))
     else:
         # Find the address state.
         state, coords = address_details(geo_data)
         # Search against the dict of radiation location states.
-        # Haversine formula against origin and destination.
+        closest, mileage = nearest_facility(state, coords)
         # Return miles and address of nearest location.
-    return str(coords)
-
-
-def address_details(geo_data):
-    """
-    Based on geocoded data from Google's API, find both the coordinates and
-    state for an address.
-    """
-    place = geo_data['Placemark'][0]
-    coords = tuple(reversed(place['Point']['coordinates'][:-1]))
-    address_dict = place['AddressDetails']['Country']['AdministrativeArea']
-    state = address_dict['AdministrativeAreaName']
-    return state, coords
+    latitude, longitude = closest
+    latitude, longitude = round(latitude, 2), round(longitude, 2)
+    mileage = int(round(mileage))
+    return render_template('epa_data/radinfo.html', mileage=mileage,
+                           latitude=latitude, longitude=longitude)
 
 
 @views.route('/epa/pcs')

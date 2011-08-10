@@ -9,24 +9,34 @@
 {% block main %}
 
 <div class="epa">
-    <h2>{{ count }}</h2>
-    <p class="top">Facilities in your ZIP Code either currently have or previously
-    had permits to pollute public water sources.
-    </p>
+  <p class="top">The following information has been rounded and may not be 100%
+  accurate. According to our current records, the closest radiation
+  facility to your location is...</p>
 </div>
-<hr />
 <div class="epa clearfix">
-    <div class="float_left"></div>
-    <div class="float_right">
-      <h2>{{ miles }}</h2>
-      <em>Miles</em>
+    <div class="float_left radiation_img"></div>
+    <div class="float_right radiation_miles">
+      <h2>{{ mileage }}</h2>
+      <em>Miles Away</em>
     </div>
 </div>
 <hr />
 <div class="epa clearfix">
     <div class="float_left">
+      <p>The closest facility's rounded latitude and longitude...</p>
+      <p class="lat_lng">(&nbsp;{{ latitude }}, {{ longitude }}&nbsp;)</p>
     </div>
-    <div class="float_right arrow_img">
+    <div class="float_right marker_img">
+    </div>
+</div>
+<hr />
+<div class="epa clearfix">
+    <div class="float_left globe_img">
+    </div>
+    <div class="float_right">
+      <p>The EPA has <strong>146</strong> listed facilities in the US. Out of
+      all states, <strong>Illinois</strong> has the most radiation facilities
+      with a total of 15. New Mexico and Florida both have 11.</p>
     </div>
 </div>
 <hr />
@@ -38,7 +48,7 @@
     </div>
     <div class="float_right">
         <p>Or download the JSON data used to make this page?</p>
-        <a href="{{ url_for('epa_pcs') }}?zipcode={{ zipcode }}&format=json" class="json_data">{ }</a>
+        <a href="{{ url_for('epa_radinfo') }}?format=json" class="json_data">{ }</a>
     </div>
 </div>
 {% endblock %}
