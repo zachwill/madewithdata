@@ -9,13 +9,11 @@ def address_details(geo_data):
     Based on geocoded data from Google's API, find both the coordinates and
     state for an address.
     """
-    place = geo_data['Placemark'][0]
-    coords = tuple(reversed(place['Point']['coordinates'][:-1]))
+    lat_lng = geo_data['latLng']
+    coords = (lat_lng['lat'], lat_lng['lng'])
     try:
-        address_dict = place['AddressDetails']['Country']['AdministrativeArea']
-        state = address_dict['AdministrativeAreaName']
+        state = geo_data['adminArea3']
     except:
-        # No state found in the Google Maps search.
         state = None
     return state, coords
 

@@ -8,8 +8,8 @@ application.
 from flask import (Module, render_template, redirect, request,
                    url_for, jsonify, flash)
 
+import mapq
 from epa.pcs import PCS
-from googlemaps import GoogleMaps
 
 from epa_utils import address_details, nearest_facility, pcs_set_to_list
 from .forms import EpaForm
@@ -54,7 +54,8 @@ def epa_radinfo():
         return redirect(url_for('epa'))
     address = request.args['address']
     try:
-        geo_data = GoogleMaps().geocode(address)
+        mapq.key("Fmjtd|luua2lu2ll,80=o5-hy82u")
+        geo_data = mapq.geocode(address)
     except:
         return redirect(url_for('epa'))
     else:
