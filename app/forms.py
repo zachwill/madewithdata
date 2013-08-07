@@ -6,7 +6,7 @@ Flask-WTF Documentation:  http://packages.python.org/Flask-WTF/
 Forms for your application can be stored in this file.
 """
 
-from flaskext.wtf import Form, SelectField, SubmitField, TextField, Required
+from flask.ext.wtf import Form, SelectField, SubmitField, TextField, Required
 
 class EpaForm(Form):
     """Form for querying the EPA APIs."""
